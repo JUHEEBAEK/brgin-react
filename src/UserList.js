@@ -1,7 +1,7 @@
 import React from "react";
 
 // props로 user 받기
-function User({user}) {
+function User({ user }) {
     return (
         <div>
             <b>{user.username}</b><span>({user.email})</span>
@@ -9,8 +9,7 @@ function User({user}) {
     )
 }
 
-function UserList(users) {
-    users = users.users;
+function UserList({ users }) {
     return (
         <div>
             {
