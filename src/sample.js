@@ -15,3 +15,5 @@ const users = [
         email: "iceBear@bears.com"
     }
 ];
+
+export default users;
