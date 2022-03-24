@@ -2,6 +2,7 @@ import React from 'react';
 
 import './App.css';
 import { Button } from './components/Button';
+import { Container } from './components/Container';
 import { Greet } from "./components/Greet"
 import { Heading } from './components/Heading';
 import { Input } from './components/input';
@@ -41,7 +42,8 @@ function App() {
         <Heading>Oscar goes to Leonardo Dicprio! </Heading>
       </Oscar>
       <Button name='newButton' clickHandler={(event) => {console.log('button', event)}} />
-        <Input />
+      <Input />
+      <Container styles={{border: '1px solid black'}} />
       
     </div>
   );
