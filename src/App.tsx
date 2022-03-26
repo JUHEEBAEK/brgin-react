@@ -11,6 +11,10 @@ import { Person } from "./components/Person"
 import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
 import { User } from './components/state/User';
+import { ThemeContextProvider } from './components/context/ThemeContext';
+import { Box } from './components/context/Box';
+
+
 
 
 function App() {
@@ -46,6 +50,9 @@ function App() {
       <Input />
       <Container styles={{border: '1px solid black'}} />
       <User />
+      <ThemeContextProvider> 
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
