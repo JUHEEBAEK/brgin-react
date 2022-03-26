@@ -10,6 +10,7 @@ import { Oscar } from './components/Oscar';
 import { Person } from "./components/Person"
 import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
+import { User } from './components/state/User';
 
 
 function App() {
@@ -44,7 +45,7 @@ function App() {
       <Button name='newButton' clickHandler={(event) => {console.log('button', event)}} />
       <Input />
       <Container styles={{border: '1px solid black'}} />
-      
+      <User />
     </div>
   );
 }
