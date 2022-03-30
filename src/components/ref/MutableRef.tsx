@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-function ManualCounter() {
+export const ManualCounter = () =>{
   const [count, setCount] = useState(0);
   const intervalId = useRef<number | null>(null);
 

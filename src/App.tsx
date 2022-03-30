@@ -15,11 +15,10 @@ import { ThemeContextProvider } from './components/context/ThemeContext';
 import { Box } from './components/context/Box';
 import { UserContextProvider } from './components/context/UserContext';
 import { UserWithContext } from './components/context/User';
-
-
-
-
-
+import { ManualCounter } from './components/ref/MutableRef';
+import { Private } from './components/auth/Private';
+import { Profile } from './components/auth/Profile'
+import { Size } from './components/effect/Size';
 
 function App() {
   const personName = {
@@ -43,14 +42,19 @@ function App() {
   
   return (
     <div className="App">
-      <Greet name='cheol' messageCount={10} isLoggedIn={true} />
-      <Person name={personName} />
+      <Size />
       <PersonList names={nameList} />
+      <Private isLoggedIn={false} Component={Profile} />
+      {/* <Button name='newButton' clickHandler={(event) => {console.log('button', event)}} />
+      <Greet name='cheol' messageCount={10} isLoggedIn={false} /> */}
+      {/* 
+      <Person name={personName} />
+      
       <Status status='loading' />
       <Oscar>
         <Heading>Oscar goes to Leonardo Dicprio! </Heading>
       </Oscar>
-      <Button name='newButton' clickHandler={(event) => {console.log('button', event)}} />
+      
       <Input />
       <Container styles={{border: '1px solid black'}} />
       <User />
@@ -59,7 +63,7 @@ function App() {
       </ThemeContextProvider>
       <UserContextProvider>
         <UserWithContext /> 
-      </UserContextProvider>
+      </UserContextProvider> */}
     </div>
   );
 }
