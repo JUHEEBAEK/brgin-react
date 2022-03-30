@@ -12,7 +12,7 @@ export const Greet = (props:GreetProps) => {
       <h2>
         {props.isLoggedIn
         ? `Name: ${props.name} You have ${messageCount} messages`
-        : 'Wecom Guest'
+        : 'Welcome Guest'
         }
         
       </h2>
