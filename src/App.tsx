@@ -19,6 +19,9 @@ import { ManualCounter } from './components/ref/MutableRef';
 import { Private } from './components/auth/Private';
 import { Profile } from './components/auth/Profile'
 import { Size } from './components/effect/Size';
+import {Routes, Route, BrowserRouter} from "react-router-dom"
+import { Home } from './pages/Home';
+import { SubRouter } from './pages/SubRouter';
 
 function App() {
   const personName = {
@@ -41,10 +44,14 @@ function App() {
   ]
   
   return (
-    <div className="App">
-      <Size />
-      <PersonList names={nameList} />
-      <Private isLoggedIn={false} Component={Profile} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/size" element={<Size />} />
+        <Route path="/personlist" element={<PersonList names={nameList} />} />
+        <Route path="/profile" element={<Private isLoggedIn={false} Component={Profile} />} />
+        <Route path="/sub/*" element={<SubRouter />} />
+      </Routes>
       {/* <Button name='newButton' clickHandler={(event) => {console.log('button', event)}} />
       <Greet name='cheol' messageCount={10} isLoggedIn={false} /> */}
       {/* 
@@ -64,7 +71,7 @@ function App() {
       <UserContextProvider>
         <UserWithContext /> 
       </UserContextProvider> */}
-    </div>
+    </BrowserRouter >
   );
 }
 
