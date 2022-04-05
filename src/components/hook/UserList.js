@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // props로 user 받기
 function User({ user, onRemove, onToggle }) {
@@ -16,6 +16,32 @@ function User({ user, onRemove, onToggle }) {
         border: "solid 1px #ff576e"
     }
     const { username, email, id, active } = user;
+
+   /*  useEffect(() => {
+       // 두번째 param에 빈 배열을 넣을 경우
+        console.log("컴포넌트가 화면에 나타났다!!");
+        // props => state로 변환할 때
+        // REST API 
+        // 라이브러리를 사용할 때 d3, video.js
+        // dom에 그려지고 나서 실행되는 곳이어서 dom을 만질 때
+        return () => {
+            // clearInterval, clearTimeout
+            // 라이브러리 제거 함수 클리너 함수(뒷정리 함수)
+            console.log("컴포넌트가 화면에서 사라집니다!!");
+        }
+    }, []); */
+
+    useEffect(() => {
+        // 값을 넣었을 경우
+        // console.log("user 값이 설정 됨")
+        // console.log(user);
+        return () => {
+            // 뒷 정리 함수로 업데이트 하기 전에 호출됨.
+            // console.log("user 값이 바뀌기 전")
+            // console.log(user);
+        }
+    }, [user]); // 값을 넣어야지만 최신의 값을 가져올 수가 있다. 안 넣으면 에러남
+
     return (
         <div style={{
             display: "flex",
