@@ -3,7 +3,7 @@ import Card from "../components/Card";
 import Hello from "../components/Hello";
 import Counter from "../components/Counter";
 import InputSample from "../components/InputSample";
-import UserList from "../components/UserList";
+import UserView from "../components/hook/Main";
 
 function App() {
   return (
@@ -40,7 +40,7 @@ function App() {
       </Card>
       <Card header="for문">
         {/* useRef 초기화 버튼 누르고 이름에 포커스 가도록 설정 */}
-       <UserList /> 
+       <UserView /> 
       </Card>
     </>
   );
