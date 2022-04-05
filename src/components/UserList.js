@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // props로 user 받기
 function User({ user, onRemove, onToggle }) {
@@ -38,12 +38,33 @@ function User({ user, onRemove, onToggle }) {
                 onClick={onRemove(id)} 이렇게 하면 불러오자 마자 다 사라짐
             */}
             &nbsp;
-            <button style={buttonIconStyle} onClick={() => onRemove(id)}> X </button> 
+            {/* <button style={buttonIconStyle} onClick={() => onRemove(id)}> X </button>  */}
         </div>
     )
 }
 
-function UserList({ users, onRemove, onToggle }) {
+function UserList({ onRemove, onToggle }) {
+
+  const [users] = useState([
+    {
+        id: 1,
+        username: "Grizz",
+        email: "grizz@bears.com",
+        active: true
+    },
+    {
+        id: 2,
+        username: "Panda",
+        email: "panda@bears.com",
+        active: true
+    },
+    {
+        id: 3,
+        username: "IceBear",
+        email: "iceBear@bears.com",
+        active: true
+    }
+  ]);
     return (
         <div>
             {

@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 
 class Hello extends React.Component {
-    render() {
-      return (
-        <p>Hello, {this.props.name}</p>
-      );
-    }
+  render() {
+    return (
+      <p>Hello, {this.props.name}</p>
+    );
   }
-
+}
+// props default
 Hello.defaultProps = {
     name: "React"
 }

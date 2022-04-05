@@ -2,7 +2,7 @@ import React , {useState, useRef} from "react";
 
 function InputSample() {
     const [inputs, setInputs] = useState({
-        name: "",
+        name: "", 
         nickname: ""
     });
     const nameInput = useRef();
@@ -32,7 +32,7 @@ function InputSample() {
             <input name="nickname" placeholder="닉네임" value={nickname} onChange={onChange} />
             <button onClick={onReset}>초기화</button>
             <div>
-                <b>값: </b>
+                <b>사용자 정보: </b>
                 {name}({nickname})
             </div>
         </div>
