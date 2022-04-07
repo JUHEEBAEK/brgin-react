@@ -22,6 +22,7 @@ import { Size } from './components/effect/Size';
 import {Routes, Route, BrowserRouter} from "react-router-dom"
 import { Home } from './pages/Home';
 import { SubRouter } from './pages/SubRouter';
+import { Counter } from './features/counter/Counter';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/size" element={<Size />} />
+        <Route path="/counter" element={<Counter />} />
         <Route path="/personlist" element={<PersonList names={nameList} />} />
         <Route path="/profile" element={<Private isLoggedIn={false} Component={Profile} />} />
         <Route path="/sub/*" element={<SubRouter />} />

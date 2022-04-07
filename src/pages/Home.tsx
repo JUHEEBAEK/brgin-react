@@ -11,6 +11,9 @@ export const Home = () => {
         <Link to="/size"> Size </Link>
       </li>
       <li>
+        <Link to="/counter"> Counter - redux </Link>
+      </li>
+      <li>
         <Link to="/personlist"> personlist </Link>
       </li>
       <li>
