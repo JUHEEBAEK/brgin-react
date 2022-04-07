@@ -23,6 +23,8 @@ import {Routes, Route, BrowserRouter} from "react-router-dom"
 import { Home } from './pages/Home';
 import { SubRouter } from './pages/SubRouter';
 import { Counter } from './features/counter/Counter';
+import { AddPostForm } from './features/posts/AddPostForm';
+import { PostsList } from './features/posts/PostsList';
 
 
 function App() {
@@ -51,6 +53,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/size" element={<Size />} />
         <Route path="/counter" element={<Counter />} />
+        <Route path="/postlist" element={<React.Fragment>
+                <AddPostForm />
+                <PostsList />
+              </React.Fragment>} />
         <Route path="/personlist" element={<PersonList names={nameList} />} />
         <Route path="/profile" element={<Private isLoggedIn={false} Component={Profile} />} />
         <Route path="/sub/*" element={<SubRouter />} />

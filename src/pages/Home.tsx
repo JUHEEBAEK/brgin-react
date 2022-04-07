@@ -14,6 +14,10 @@ export const Home = () => {
         <Link to="/counter"> Counter - redux </Link>
       </li>
       <li>
+        <Link to="/postlist"> postlist </Link>
+      </li>
+      
+      <li>
         <Link to="/personlist"> personlist </Link>
       </li>
       <li>
