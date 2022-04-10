@@ -48,39 +48,43 @@ function App() {
   ]
   
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/size" element={<Size />} />
-        <Route path="/counter" element={<Counter />} />
-        <Route path="/postlist" element={<React.Fragment>
-                <AddPostForm />
-                <PostsList />
-              </React.Fragment>} />
-        <Route path="/personlist" element={<PersonList names={nameList} />} />
-        <Route path="/profile" element={<Private isLoggedIn={false} Component={Profile} />} />
-        <Route path="/sub/*" element={<SubRouter />} />
-      </Routes>
-      {/* <Button name='newButton' clickHandler={(event) => {console.log('button', event)}} />
-      <Greet name='cheol' messageCount={10} isLoggedIn={false} /> */}
-      {/* 
-      <Person name={personName} />
-      
-      <Status status='loading' />
-      <Oscar>
-        <Heading>Oscar goes to Leonardo Dicprio! </Heading>
-      </Oscar>
-      
-      <Input />
-      <Container styles={{border: '1px solid black'}} />
-      <User />
-      <ThemeContextProvider> 
-        <Box />
-      </ThemeContextProvider>
-      <UserContextProvider>
-        <UserWithContext /> 
-      </UserContextProvider> */}
-    </BrowserRouter >
+    <div>
+      <Button name='newButton' clickHandler={(event) => {console.log('button', event)}} />
+    
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/size" element={<Size />} />
+          <Route path="/counter" element={<Counter />} />
+          <Route path="/postlist" element={<React.Fragment>
+                  <AddPostForm />
+                  <PostsList />
+                </React.Fragment>} />
+          <Route path="/personlist" element={<PersonList names={nameList} />} />
+          <Route path="/profile" element={<Private isLoggedIn={false} Component={Profile} />} />
+          <Route path="/sub/*" element={<SubRouter />} />
+        </Routes>
+        {/* <Button name='newButton' clickHandler={(event) => {console.log('button', event)}} />
+        <Greet name='cheol' messageCount={10} isLoggedIn={false} /> */}
+        {/* 
+        <Person name={personName} />
+        
+        <Status status='loading' />
+        <Oscar>
+          <Heading>Oscar goes to Leonardo Dicprio! </Heading>
+        </Oscar>
+        
+        <Input />
+        <Container styles={{border: '1px solid black'}} />
+        <User />
+        <ThemeContextProvider> 
+          <Box />
+        </ThemeContextProvider>
+        <UserContextProvider>
+          <UserWithContext /> 
+        </UserContextProvider> */}
+      </BrowserRouter >
+    </div>
   );
 }
 

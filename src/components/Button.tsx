@@ -1,3 +1,6 @@
+
+import './Button.scoped.scss'
+
 type ButtonPrpos = {
   name: string
   clickHandler: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
@@ -6,7 +9,7 @@ type ButtonPrpos = {
 
 export const Button = (props: ButtonPrpos) => {
   return (
-    <div>
+    <div className='title'>
       <button onClick={(event) => props.clickHandler(event)} >
         {props.name}
       </button>
