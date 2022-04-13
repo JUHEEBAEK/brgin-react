@@ -4,6 +4,8 @@ import Hello from "../components/Hello";
 import Counter from "../components/Counter";
 import InputSample from "../components/InputSample";
 import UserView from "../components/hook/Main";
+import UseReducerCounter from "../components/hook/useReducer/Counter";
+import UserReducerView from "../components/hook/useReducer/Main";
 
 function App() {
   return (
@@ -38,9 +40,15 @@ function App() {
         {/* useRef 초기화 버튼 누르고 이름에 포커스 가도록 설정 */}
        <InputSample /> 
       </Card>
-      <Card header="for문">
+      <Card header="for문, useEffect, useCallback, useMemo">
         {/* useRef 초기화 버튼 누르고 이름에 포커스 가도록 설정 */}
        <UserView /> 
+      </Card>
+      <Card header="useReducer">
+        {/* useRef 초기화 버튼 누르고 이름에 포커스 가도록 설정 */}
+        <UseReducerCounter />
+        <br />
+        <UserReducerView />
       </Card>
     </>
   );
