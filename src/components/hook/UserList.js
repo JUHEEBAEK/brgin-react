@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 // props로 user 받기
-function User({ user, onRemove, onToggle }) {
+const User = React.memo(function User({ user, onRemove, onToggle }) {
     const buttonIconStyle = {
         display: "flex",
         justifyContent: "center",
@@ -67,7 +67,7 @@ function User({ user, onRemove, onToggle }) {
             <button style={buttonIconStyle} onClick={() => onRemove(id)}> X </button> 
         </div>
     )
-}
+});
 
 function UserList({ users, onRemove, onToggle }) {
     return (
@@ -89,4 +89,6 @@ function UserList({ users, onRemove, onToggle }) {
     )
 }
 
-export default UserList;
+// React.memo 진짜 사용해야 할 때 사용하기
+
+export default React.memo(UserList);
