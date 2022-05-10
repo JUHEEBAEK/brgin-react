@@ -6,6 +6,7 @@ import InputSample from "../components/InputSample";
 import UserView from "../components/hook/Main";
 import UseReducerCounter from "../components/hook/useReducer/Counter";
 import UserReducerView from "../components/hook/useReducer/Main";
+import ContextSample from "../components/ContextSample";
 
 function App() {
   return (
@@ -49,6 +50,10 @@ function App() {
         <UseReducerCounter />
         <br />
         <UserReducerView />
+      </Card>
+      <Card header="contextSample">
+        {/* useRef 초기화 버튼 누르고 이름에 포커스 가도록 설정 */}
+        <ContextSample />
       </Card>
     </>
   );
